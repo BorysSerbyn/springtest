@@ -5,7 +5,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: maven:3.6.3-jdk-15-slim
+    container: maven:3.6.3-openjdk-15-slim
     steps:
       - uses: actions/checkout@master
 
