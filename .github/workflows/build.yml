@@ -5,12 +5,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: maven:3.6.3-jdk-11-slim
+    container: maven:3.6.3-jdk-15-slim
     steps:
       - uses: actions/checkout@master
 
       - name: Build project with Maven
-        run: mvn package
+        run: mvn package -B
 
       - name: Push to Docker Hub
         uses: docker/build-push-action@v1
